@@ -104,11 +104,11 @@ def find_package_data(
 
 
 PACKAGE = "intercom"
-NAME = "django-intercom"
+NAME = "django-intercom-io"
 DESCRIPTION = "a pluggable app for adding intercom.io to your website"
 AUTHOR = "James Tauber"
 AUTHOR_EMAIL = "developer@eldarion.com"
-URL = "https://github.com/eldarion/django-intercom"
+URL = "https://github.com/eldarion/django-intercom-io"
 VERSION = __import__(PACKAGE).__version__
 
 
