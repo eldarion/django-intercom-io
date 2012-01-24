@@ -5,7 +5,7 @@ Installation
 
 * To install ::
 
-    pip install django-intercom
+    pip install django-intercom-io
 
 or add ``django-intercom==0.1`` to your requirements file.
 
