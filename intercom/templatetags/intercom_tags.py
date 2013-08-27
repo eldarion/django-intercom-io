@@ -1,9 +1,10 @@
 import time
 
+from hashlib import sha1
+
 from django import template
 from django.conf import settings
 from django.utils import simplejson
-from django.utils.hashcompat import sha_constructor
 
 
 register = template.Library()
@@ -13,7 +14,7 @@ register = template.Library()
 def intercom_js(user):
     if hasattr(settings, "INTERCOM_APP_ID") and user.is_authenticated():
         if hasattr(settings, "INTERCOM_USER_HASH_KEY"):
-            user_hash = sha_constructor(settings.INTERCOM_USER_HASH_KEY + user.email).hexdigest()
+            user_hash = sha1(settings.INTERCOM_USER_HASH_KEY + user.email).hexdigest()
         else:
             user_hash = None
         
