@@ -26,6 +26,7 @@ def intercom_js(user):
         return {
             "app_id": settings.INTERCOM_APP_ID,
             "email": user.email,
+            "user_id": user.pk,
             "user_hash": user_hash,
             "user": user,
             "created_at": int(time.mktime(user.date_joined.timetuple())),
