@@ -2,6 +2,7 @@
 <script>
   var intercomSettings = {
     app_id: '{{ app_id }}',
+    user_id: '{{ user.pk }}',
     email: '{{ email }}',{% if user_hash %}
     user_hash: '{{ user_hash }}',{% endif %}
     custom_data: {{ custom_data|safe }},
