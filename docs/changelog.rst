@@ -3,6 +3,11 @@
 ChangeLog
 =========
 
+0.4
+---
+
+- change has function to use user.pk instead of email address
+
 0.3
 ---
 
