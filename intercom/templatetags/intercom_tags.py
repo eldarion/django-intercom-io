@@ -1,10 +1,10 @@
+import json
+import hashlib
+import hmac
 import time
-
-import hmac, hashlib
 
 from django import template
 from django.conf import settings
-from django.utils import simplejson
 
 
 register = template.Library()
@@ -29,7 +29,7 @@ def intercom_js(user):
             "user_hash": user_hash,
             "user": user,
             "created_at": int(time.mktime(user.date_joined.timetuple())),
-            "custom_data": simplejson.dumps(custom_data, ensure_ascii=False)
+            "custom_data": json.dumps(custom_data, ensure_ascii=False)
         }
     else:
         return {}
